@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Krona One", sans-serif;
+}
+:root {
+  --green: rgb(38, 76, 89);
+  --light-green: rgb(172, 198, 201);
+  --light-grey: #f1f1f4;
+  --text-color-light: #f1f1f1;
+  --text-color-dark: #333;
+  --text-color-danger: rgb(152, 58, 58);
+  --white: #f1f1f1;
+  --bluebutton: #1b46f8;
+}
+/* This is the margin of the front page */
+.first-home {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* Big hero text starts here */
+.heading {
+  font-size: 5vw;
+  width: 100%;
+  white-space: nowrap;
+}
+.over-heading {
+  position: absolute;
+  font-size: 6.2vw;
+  white-space: nowrap;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--bluebutton);
+  z-index: -99;
+}
+
+.position-over-heading {
+  width: 100%;
+  height: 60px;
+  margin-top: 50px;
+}
+/* Big hero text ends here */
+
+/* Background image overlay */
+.bgimage {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: -1000;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  box-shadow: 0px 10px 20px rgb(211, 211, 211);
+}
+
+/* Round circle on overlay*/
+.roundcircle {
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 210px;
+  z-index: -999;
+}
+/* Round circle div-holder*/
+.circle-holder {
+  width: 100%;
+  height: 100vh;
+}
+
+/* div-holder image and text*/
+.over-frontpage-objects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.imageofmikkel {
+  width: 950px;
+  border-radius: 300px;
+  position: absolute;
+  right: 30px;
+}
