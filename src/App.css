@@ -7,43 +7,19 @@
   font-family: "Krona One", sans-serif;
 }
 :root {
-  --green: rgb(38, 76, 89);
-  --light-green: rgb(172, 198, 201);
-  --light-grey: #f1f1f4;
-  --text-color-light: #f1f1f1;
-  --text-color-dark: #333;
-  --text-color-danger: rgb(152, 58, 58);
+  --cards: #f5f5f5;
   --white: #f1f1f1;
   --bluebutton: #1b46f8;
 }
-/* This is the margin of the front page */
-.first-home {
-  margin-left: 50px;
-  margin-right: 50px;
+h3 {
+  font-size: 25px;
+  font-weight: 100;
 }
-
-/* Big hero text starts here */
-.heading {
-  font-size: 5vw;
-  width: 100%;
-  white-space: nowrap;
+h4 {
+  font-size: 25px;
+  font-weight: 100;
+  color: var(--bluebutton);
 }
-.over-heading {
-  position: absolute;
-  font-size: 6.2vw;
-  white-space: nowrap;
-  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--bluebutton);
-  z-index: -99;
-}
-
-.position-over-heading {
-  width: 100%;
-  height: 60px;
-  margin-top: 50px;
-}
-/* Big hero text ends here */
 
 /* Background image overlay */
 .bgimage {
@@ -53,37 +29,301 @@
   position: absolute;
   top: 0;
   z-index: -1000;
-  border-bottom-left-radius: 200px;
-  border-bottom-right-radius: 200px;
+  border-bottom-left-radius: 9vw;
+  border-bottom-right-radius: 9vw;
   box-shadow: 0px 10px 20px rgb(211, 211, 211);
 }
 
-/* Round circle on overlay*/
-.roundcircle {
-  width: 700px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 210px;
-  z-index: -999;
-}
-/* Round circle div-holder*/
-.circle-holder {
-  width: 100%;
-  height: 100vh;
+.over-frontpage-text {
+  margin-left: 5%;
+  padding-top: 30px;
 }
 
-/* div-holder image and text*/
-.over-frontpage-objects {
+.locationtext {
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.aboutme-btn {
+  margin-top: 40px;
+  width: 190px;
+  height: 50px;
+  font-size: 18px;
+  background-color: var(--bluebutton);
+  color: var(--white);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.first-home {
+  height: 90vh;
+}
+
+/* Kompetence cards starts here */
+.overallcards {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 50%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.kompetence-text-icon {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-top: 50px;
+  align-items: center;
 }
 
-.imageofmikkel {
-  width: 950px;
-  border-radius: 300px;
-  position: absolute;
-  right: 30px;
+.kompetence-icon {
+  width: 50px;
+  height: 40px;
+}
+.kompetence-program {
+  margin-top: 20px;
+  width: 300px;
+  align-self: flex-end;
+}
+.kompetence-brodtext-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.brodtext {
+  margin-top: 30px;
+}
+
+.margin-header {
+  margin-right: 40px;
+}
+
+/*Mediarules*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* Big hero text starts here */
+  .heading {
+    margin-left: 5%;
+    margin-top: 2vw;
+    font-size: 8vw;
+    font-weight: 100;
+  }
+
+  .over-heading {
+    display: none;
+  }
+  .over-frontpage-objects {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .imageofmikkel {
+    width: 90vw;
+    height: 300px;
+    border-bottom-left-radius: 150px;
+    border-top-left-radius: 150px;
+    left: 0;
+    right: -110px;
+    object-fit: cover;
+    object-position: 20% 10%; /* try 20px 10px */
+    align-self: end;
+    margin-top: 30px;
+  }
+  /* Round circle on overlay*/
+  .roundcircle {
+    width: 110vw;
+    position: absolute;
+    left: 10%;
+    transform: translateX(-50%);
+    bottom: 1px;
+    z-index: -999;
+    overflow: hidden;
+  }
+  /* Round circle div-holder*/
+  .circle-holder {
+    width: 100%;
+    height: 100vh;
+  }
+  .over-kompetence {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cards);
+    width: 90vw;
+    height: 450px;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    box-shadow: 0px 10px 20px rgb(211, 211, 211);
+    margin-top: 14vw;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  /* Big hero text starts here */
+  .heading {
+    margin-left: 5%;
+    margin-top: 2vw;
+    font-size: 8vw;
+    font-weight: 100;
+  }
+
+  .over-heading {
+    display: none;
+  }
+
+  .over-frontpage-objects {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .imageofmikkel {
+    width: 500px;
+    height: 300px;
+    border-bottom-left-radius: 150px;
+    border-top-left-radius: 150px;
+    left: 0;
+    right: -110px;
+    object-fit: cover;
+    object-position: 20% 10%; /* try 20px 10px */
+    align-self: end;
+    margin-top: 30px;
+  }
+  /* Round circle on overlay*/
+  .roundcircle {
+    width: 80vw;
+    position: absolute;
+    left: 40%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    z-index: -999;
+    overflow: hidden;
+  }
+  /* Round circle div-holder*/
+  .circle-holder {
+    width: 100%;
+    height: 100vh;
+  }
+  .over-kompetence {
+    width: 100vw;
+  }
+  .over-kompetence {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cards);
+    width: 90vw;
+    height: 350px;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    box-shadow: 0px 10px 20px rgb(211, 211, 211);
+    margin-top: 6vw;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  /* Big hero text starts here */
+  .heading {
+    margin-top: 0vw;
+    font-size: 5vw;
+    white-space: nowrap;
+  }
+  .over-heading {
+    margin-left: 5%;
+    display: block;
+    position: absolute;
+    font-size: 6vw;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--bluebutton);
+    z-index: -99;
+  }
+
+  .position-over-heading {
+    width: 100%;
+    height: 4vw;
+    margin-top: 50px;
+  }
+  /* Big hero text ends here */
+
+  /* Round circle on overlay*/
+  .roundcircle {
+    width: 60vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    z-index: -999;
+    overflow: hidden;
+  }
+  /* Round circle div-holder*/
+  .circle-holder {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  /* div-holder image and text*/
+  .over-frontpage-objects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  .imageofmikkel {
+    width: 60vw;
+    height: 400px;
+    border-radius: 300px;
+    right: -110px;
+    object-fit: cover;
+  }
+
+  /* Round circle on overlay*/
+  .roundcircle {
+    display: block;
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 210px;
+    z-index: -999;
+    overflow: hidden;
+  }
+  /* Round circle div-holder*/
+  .circle-holder {
+    width: 100%;
+    height: 100vh;
+  }
+}
+@media only screen and (min-width: 1065px) {
+  .over-kompetence {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cards);
+    width: 43vw;
+    height: 350px;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    box-shadow: 0px 10px 20px rgb(211, 211, 211);
+    margin-top: 4vw;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

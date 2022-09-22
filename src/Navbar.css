@@ -1,5 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Krona One", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+:root {
+  --cards: #f5f5f5;
+  --white: #f1f1f1;
+  --bluebutton: #1b46f8;
+  --darkbg: #292929;
+  /* navbar starts here */
+}
 .logo {
   width: 150px;
 }
@@ -9,8 +26,8 @@
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  padding-left: 50px;
-  padding-right: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .navlinks {
@@ -31,6 +48,14 @@
 .contact {
   text-decoration: none;
   color: black;
+  font-size: 20px;
+  padding: 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-family: "Krona One", sans-serif;
+}
+.footer-links {
+  text-decoration: none;
   font-size: 20px;
   padding: 10px;
   margin: 0 10px;
@@ -71,6 +96,101 @@
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #1b46f8;
 }
+/* navbar ends here */
+
+/* Footer starts here */
+footer {
+  background-color: var(--darkbg);
+  width: 100%;
+  height: 500px;
+  color: var(--white);
+}
+.footer-overall {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+a.contact-footer,
+.about-footer,
+.projects-footer {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.mail-info,
+.phone-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.mobile-info {
+  padding-top: 1vw;
+}
+
+.contacticons-footer {
+  width: 25px;
+  height: 24px;
+}
+
+.socialsicon-footer {
+  width: 25px;
+}
+
+.mailbtn-footer {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: var(--white);
+  padding-left: 1vw;
+}
+
+.phonenumber-footer {
+  color: var(--white);
+  padding-left: 1vw;
+}
+.around-footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-logo-text,
+.footer-links,
+.footer-cantact-socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 13vw;
+  padding-bottom: 13vw;
+  height: 500px;
+}
+.footer-logo-text {
+  padding-left: 5%;
+}
+
+.footer-circle {
+  display: flex;
+  justify-content: flex-end;
+}
+.footer-socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 10vw;
+  padding-top: 50px;
+}
+.codingweb {
+  font-size: 8px;
+  padding-top: 50px;
+}
+/* Footer ends here */
 
 @media screen and (max-width: 860px) {
   .logo {
@@ -88,7 +208,7 @@
     position: absolute;
     display: block;
     list-style: none;
-    background-color: rgb(19, 19, 19);
+    background-color: var(--darkbg);
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     top: 0px;
@@ -104,7 +224,6 @@
 
   li {
     color: white;
-    font-size: 50px;
     padding: 30px;
   }
 
@@ -131,6 +250,11 @@
     width: 100%;
     transition: all;
     padding-top: 100px;
+    font-size: 50px;
+  }
+
+  .about {
+    padding-left: 100px;
   }
   .mobile-toggle-icon {
     height: 70px;
