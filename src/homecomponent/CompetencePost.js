@@ -1,4 +1,10 @@
-import "../App.css";
+import "../css/App.css";
+import {
+  Animator,
+  ScrollContainer,
+  ScrollPage,
+  MoveOut,
+} from "react-scroll-motion";
 
 export default function PostItem({ post }) {
   let image = "https://cederdorff.github.io/img/logo512.webp";

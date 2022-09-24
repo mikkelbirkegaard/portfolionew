@@ -2,6 +2,12 @@ import Backgroundimage from "../assets/bg-grain.jpg";
 import Roundcircle from "../assets/roundcircle.png";
 import { useEffect, useState } from "react";
 import PostItem from "./PostItem";
+import {
+  Animator,
+  ScrollContainer,
+  ScrollPage,
+  MoveOut,
+} from "react-scroll-motion";
 
 export default function Firstlookonpage() {
   const [projects, setProjects] = useState([]);
@@ -21,17 +27,27 @@ export default function Firstlookonpage() {
 
   return (
     <section className="landing-page">
-      <section className="first-home">
-        <div>
-          <div className="position-over-heading">
-            <p className="over-heading">MIKKEL CHRISTIANSEN</p>
-          </div>
-          <h1 className="heading">MIKKEL CHRISTIANSEN</h1>
-        </div>
-        {projects.map((project) => (
-          <PostItem key={project.id} post={project} />
-        ))}
-      </section>
+      <ScrollContainer>
+        <ScrollPage className="hsshs" page={0}>
+          <section className="first-home">
+            <div>
+              <div className="position-over-heading">
+                <Animator animation={MoveOut(-1000, 0)}>
+                  <p className="over-heading heading-landing">
+                    MIKKEL CHRISTIANSEN
+                  </p>
+                </Animator>
+              </div>
+              <Animator animation={MoveOut(1000, 0)}>
+                <h1 className="heading">MIKKEL CHRISTIANSEN</h1>
+              </Animator>
+            </div>
+            {projects.map((project) => (
+              <PostItem key={project.id} post={project} />
+            ))}
+          </section>
+        </ScrollPage>
+      </ScrollContainer>
       <div className="bg-holder">
         <img
           className="bgimage"

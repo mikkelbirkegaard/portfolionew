@@ -1,15 +1,21 @@
-import "../App.css";
+import "../css/App.css";
 import { Link } from "react-router-dom";
+import Bluearrow from "../assets/bluearrow.png";
+import Whitearrow from "../assets/whitearrow.png";
 
 export default function PostItem({ post }) {
   return (
     <article>
       <div className="over-frontpage-objects">
         <div className="over-frontpage-text">
-          <h3> {post.acf.education}</h3>
+          <h3 className="blue-landing-text"> {post.acf.education}</h3>
           <p className="locationtext"> {post.acf?.location}</p>
           <Link to="/about">
-            <button className="aboutme-btn">Om mig</button>
+            <button className="landingbtn">
+              Om mig
+              <img className="blue-arrow" src={Bluearrow} alt="Blå pil" />
+              <img className="white-arrow" src={Whitearrow} alt="Blå pil" />
+            </button>
           </Link>
         </div>
         {post.acf.imageofme ? (

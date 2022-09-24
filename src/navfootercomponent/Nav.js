@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
 import "../Navbar.css";
-import "../App.css";
+import "../css/App.css";
 import Instaicon from "../assets/insta.png";
 import Linkedin from "../assets/linkedin.png";
 import Github from "../assets/github.png";
