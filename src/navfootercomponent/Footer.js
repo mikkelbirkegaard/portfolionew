@@ -58,7 +58,7 @@ export default function Footer() {
                 <button
                   className="mailbtn-footer"
                   onClick={() =>
-                    (window.location = "mailto:yourmail@domain.com")
+                    (window.location = "mailto:mikkel-mc@hotmail.com")
                   }
                 >
                   mikkel-mc@hotmail.com

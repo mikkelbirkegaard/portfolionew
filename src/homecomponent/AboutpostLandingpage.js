@@ -3,12 +3,6 @@ import { Link } from "react-router-dom";
 import Spinnintext from "../assets/laesmere.png";
 
 export default function PostItem({ post }) {
-  let image = "https://cederdorff.github.io/img/logo512.webp";
-
-  if (post._embedded && post._embedded["wp:featuredmedia"]) {
-    image = post._embedded["wp:featuredmedia"][0].source_url;
-  }
-
   return (
     <section>
       <div className="over-aboutteaser">

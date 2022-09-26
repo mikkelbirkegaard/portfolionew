@@ -47,7 +47,7 @@ export default function ContactPage() {
                   <button
                     className="mailbtn-contact"
                     onClick={() =>
-                      (window.location = "mailto:yourmail@domain.com")
+                      (window.location = "mailto:mikkel-mc@hotmail.com")
                     }
                   >
                     mikkel-mc@hotmail.com

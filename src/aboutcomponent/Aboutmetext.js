@@ -13,6 +13,7 @@ export default function Aboutmepost({ post }) {
               <img
                 className="imgportrait-mobile"
                 src={post.acf.portraitimgofme.url}
+                alt="Portræt billede af Mikkel Christiansen"
               />
             ) : (
               <p>Billedet kan ikke vises</p>
@@ -24,7 +25,11 @@ export default function Aboutmepost({ post }) {
         </div>
         <div className="image-portrait-about">
           {post.acf.portraitimgofme ? (
-            <img className="imgportrait" src={post.acf.portraitimgofme.url} />
+            <img
+              className="imgportrait"
+              src={post.acf.portraitimgofme.url}
+              alt="Portræt billede af Mikkel Christiansen"
+            />
           ) : (
             <p>Billedet kan ikke vises</p>
           )}

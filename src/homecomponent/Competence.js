@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CompetencePost from "./CompetencePost";
+import React from "react";
 
 export default function Competence() {
   const [projects, setProjects] = useState([]);

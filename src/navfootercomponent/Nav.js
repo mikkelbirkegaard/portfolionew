@@ -1,15 +1,18 @@
 import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
-import "../Navbar.css";
+import "../css/Navbar.css";
 import "../css/App.css";
 import Instaicon from "../assets/insta.png";
 import Linkedin from "../assets/linkedin.png";
 import Github from "../assets/github.png";
 import Logo from "../assets/mikkellogo.png";
+import Menutoggle from "../assets/menutoggle.png";
+import Crosstoggle from "../assets/crosstoggle.png";
 import { HashLink as Link } from "react-router-hash-link";
 
 export default function Navbar() {
   const [isNav, setIsNav] = useState(false);
+
   return (
     <header>
       <nav id="forside" className="navbar">
@@ -54,9 +57,9 @@ export default function Navbar() {
         </div>
         <button className="mobile-toggle-icon" onClick={() => setIsNav(!isNav)}>
           {isNav ? (
-            <i className="fas fa-times"></i>
+            <img className="crosstoggle" src={Crosstoggle} alt="Instagram" />
           ) : (
-            <i className="fas fa-bars"></i>
+            <img className="menutoggle" src={Menutoggle} alt="Instagram" />
           )}
         </button>
       </nav>

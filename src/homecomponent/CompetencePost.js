@@ -7,14 +7,8 @@ import {
 } from "react-scroll-motion";
 
 export default function PostItem({ post }) {
-  let image = "https://cederdorff.github.io/img/logo512.webp";
-
-  if (post._embedded && post._embedded["wp:featuredmedia"]) {
-    image = post._embedded["wp:featuredmedia"][0].source_url;
-  }
-
   return (
-    <section id="scrollto">
+    <section>
       <div className="over-kompetence">
         <div className="kompetence-text-icon">
           <h4 className="margin-header">{post.acf.kompetencen}</h4>

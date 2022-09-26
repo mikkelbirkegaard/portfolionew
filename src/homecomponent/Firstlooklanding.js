@@ -27,27 +27,29 @@ export default function Firstlookonpage() {
 
   return (
     <section className="landing-page">
-      <ScrollContainer>
-        <ScrollPage className="hsshs" page={0}>
-          <section className="first-home">
-            <div>
-              <div className="position-over-heading">
-                <Animator animation={MoveOut(-1000, 0)}>
-                  <p className="over-heading heading-landing">
-                    MIKKEL CHRISTIANSEN
-                  </p>
+      <div className="showtext-bigscreens">
+        <ScrollContainer>
+          <ScrollPage page={0}>
+            <section className="first-home">
+              <div>
+                <div className="position-over-heading">
+                  <Animator animation={MoveOut(-1000, 0)}>
+                    <p className="over-heading heading-landing">
+                      MIKKEL CHRISTIANSEN
+                    </p>
+                  </Animator>
+                </div>
+                <Animator animation={MoveOut(1000, 0)}>
+                  <h1 className="heading">MIKKEL CHRISTIANSEN</h1>
                 </Animator>
               </div>
-              <Animator animation={MoveOut(1000, 0)}>
-                <h1 className="heading">MIKKEL CHRISTIANSEN</h1>
-              </Animator>
-            </div>
-            {projects.map((project) => (
-              <PostItem key={project.id} post={project} />
-            ))}
-          </section>
-        </ScrollPage>
-      </ScrollContainer>
+              {projects.map((project) => (
+                <PostItem key={project.id} post={project} />
+              ))}
+            </section>
+          </ScrollPage>
+        </ScrollContainer>
+      </div>
       <div className="bg-holder">
         <img
           className="bgimage"

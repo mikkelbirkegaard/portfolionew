@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../css/App.css";
+import Crosstoggle from "../assets/crosstoggle.png";
 
 export default function Projektbuttom({ post }) {
   const [show, setShow] = useState(false);
@@ -14,7 +15,11 @@ export default function Projektbuttom({ post }) {
                 className="crossclose-icon"
                 onClick={() => setShow(!show)}
               >
-                <i className="fas fa-times"></i>
+                <img
+                  className="social insta"
+                  src={Crosstoggle}
+                  alt="Instagram"
+                />
               </button>
             </div>
             <div className="overmodal">

@@ -20,10 +20,6 @@ code {
     monospace;
 }
 
-.landing-page {
-  overflow: hidden;
-}
-
 :root {
   --cards: #f5f5f5;
   --white: #f1f1f1;
@@ -32,9 +28,7 @@ code {
   --cardfontcolor: #606060;
   --cardsubtitlecolor: #8e8e8e;
 }
-div.element {
-  height: 100vh;
-}
+
 h3 {
   font-size: 25px;
   font-weight: 100;
@@ -73,8 +67,8 @@ h4 {
 
 /* Background image overlay */
 .bgimage {
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -82,6 +76,7 @@ h4 {
   border-bottom-left-radius: 9vw;
   border-bottom-right-radius: 9vw;
   box-shadow: 0px 10px 20px rgb(211, 211, 211);
+  overflow: hidden;
 }
 
 .over-frontpage-text {
@@ -90,7 +85,6 @@ h4 {
 
 .first-home {
   height: 90vh;
-  overflow: hidden;
 }
 
 /* Kompetence cards starts here */
@@ -111,8 +105,8 @@ h4 {
 }
 
 .kompetence-icon {
-  width: 50px;
-  height: 40px;
+  width: 40px;
+  height: 30px;
 }
 .kompetence-program {
   margin-top: 20px;
@@ -131,6 +125,7 @@ h4 {
 
 .margin-header {
   margin-right: 40px;
+  font-size: 20px;
 }
 
 /* About me teaser starts here */
@@ -146,6 +141,7 @@ h4 {
 .portrait-image {
   width: 30vw;
   border-radius: 5vw;
+  align-items: flex-start;
 }
 
 .spinicon-signatur {
@@ -223,12 +219,13 @@ h4 {
 }
 
 .over-all-aboutpost {
+  padding-bottom: 10%;
+  padding-top: 5%;
+  margin-bottom: 10%;
   border-bottom-left-radius: 60px;
   border-bottom-right-radius: 60px;
-  box-shadow: 0px 10px 20px rgb(211, 211, 211);
-  padding-bottom: 10%;
-  margin-bottom: 10%;
-  padding-top: 5%;
+  /* box-shadow: 0px 10px 20px rgb(211, 211, 211); */
+  box-shadow: 0 10px 20px -5px rgb(211, 211, 211);
 }
 
 .image-portrait-about-mobile {
@@ -305,10 +302,11 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
 }
 .overall-project {
   width: 90vw;
-  height: 90vh;
+  min-height: 100vh;
   background-color: var(--darkbg);
   border-radius: 4vw;
   position: absolute;
@@ -317,6 +315,9 @@ h4 {
   padding-right: 3%;
   padding-bottom: 3%;
   padding-top: 1%;
+  overflow-y: auto;
+  overflow-x: auto;
+  top: 10%;
 }
 .overclosebutton {
   display: flex;
@@ -348,11 +349,6 @@ h4 {
   flex: 50%;
   margin-left: 5%;
   margin-right: 5%;
-}
-
-.showprojectimg {
-  width: 23vw;
-  border-radius: 8px;
 }
 
 .crossclose-icon {
@@ -416,6 +412,22 @@ h4 {
 }
 /* Project modal ends here */
 
+/* Fadeineffect on elements starts here */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(10vh);
+  visibility: hidden;
+  transition: opacity 1000ms ease-out, transform 900ms ease-out,
+    visibility 1000ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+/* Fadeineffect on elements ends here */
+
 /*Mediarules*/
 
 /* Extra small devices (phones, 600px and down) */
@@ -423,8 +435,8 @@ h4 {
   /* Big hero text starts here */
   .heading {
     margin-left: 5%;
-    padding-top: 2%;
-    font-size: 8vw;
+    padding-top: 3%;
+    font-size: 9vw;
     font-weight: 100;
   }
   .heading-about {
@@ -436,7 +448,7 @@ h4 {
     margin-left: 5%;
     display: block;
     position: absolute;
-    font-size: 9vw;
+    font-size: 10vw;
     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--bluebutton);
@@ -455,6 +467,15 @@ h4 {
 
   .heading-landing {
     opacity: 0.2;
+  }
+  .under-heading {
+    font-size: 14px;
+    margin-left: 5%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    margin-right: 5%;
   }
   .over-frontpage-objects {
     display: flex;
@@ -566,13 +587,14 @@ h4 {
   .reco-heading {
     font-size: 7vw;
     margin-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
   .chooseme {
     display: flex;
     flex-direction: column;
     background-color: var(--cards);
     border-radius: 30px;
-    padding: 40px;
     margin-left: 5%;
     margin-right: 5%;
   }
@@ -670,6 +692,17 @@ h4 {
   .imgportrait {
     display: none;
   }
+  .showprojectimg {
+    width: 80vw;
+    border-radius: 8px;
+    margin-top: 5%;
+  }
+  .images-project {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 .about-underoverskrift {
   margin-left: 5%;
@@ -728,10 +761,10 @@ h4 {
   }
 
   .imageofmikkel {
-    width: 500px;
-    height: 300px;
-    border-bottom-left-radius: 150px;
-    border-top-left-radius: 150px;
+    width: 90vw;
+    height: 30vh;
+    border-bottom-left-radius: 500px;
+    border-top-left-radius: 500px;
     left: 0;
     right: -110px;
     object-fit: cover;
@@ -895,13 +928,18 @@ h4 {
   .overmodal {
     display: flex;
     flex-direction: column;
-    height: 70vh;
     justify-content: space-between;
   }
   .images-project {
+    margin-top: 20%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
+  }
+  .showprojectimg {
+    width: 80vw;
+    border-radius: 8px;
+    margin-top: 5%;
   }
   .landingbtn {
     margin-top: 40px;
@@ -944,6 +982,15 @@ h4 {
   }
   .imgportrait {
     display: none;
+  }
+  .under-heading {
+    font-size: 16px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    line-height: 1.8;
   }
 }
 
@@ -1054,6 +1101,17 @@ h4 {
     width: 30vw;
     margin-left: 5%;
     margin-top: 5%;
+  }
+  .showprojectimg {
+    width: 80vw;
+    border-radius: 8px;
+    margin-top: 5%;
+  }
+  .images-project {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 }
 
@@ -1183,7 +1241,6 @@ h4 {
   .overmodal {
     display: flex;
     flex-direction: row;
-    height: 70vh;
     justify-content: space-between;
   }
   .images-project {
@@ -1196,6 +1253,17 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+  .showprojectimg {
+    width: 30vw;
+    border-radius: 8px;
+    margin-top: 5%;
+  }
+  .images-project {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 }
 @media only screen and (min-width: 1065px) {
@@ -1226,6 +1294,24 @@ h4 {
     border-radius: 30px;
     box-shadow: 0px 10px 20px rgb(211 211 211);
     margin-top: 4vw;
+  }
+  .showprojectimg {
+    width: 30vw;
+    border-radius: 8px;
+    margin-top: 5%;
+  }
+  .images-project {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .under-heading {
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
   }
 }
 
