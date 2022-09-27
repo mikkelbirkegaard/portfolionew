@@ -429,9 +429,6 @@ h4 {
 }
 /* Project modal ends here */
 
-.margin-reco {
-  padding: 5%;
-}
 /*Mediarules*/
 
 @media only screen and (max-height: 600px) {
@@ -725,6 +722,9 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+  .margin-reco {
+    padding: 5%;
   }
 }
 .about-underoverskrift {
