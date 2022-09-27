@@ -6,7 +6,11 @@ export default function Recommendationpost({ post }) {
       <div className="recomendationcard-over">
         <div className="logo-reco">
           {post.acf.logo ? (
-            <img className="companylogo" src={post.acf.logo.url} />
+            <img
+              className="companylogo"
+              src={post.acf.logo.url}
+              alt="Virksomhedslogo"
+            />
           ) : (
             <p>Billedet kan ikke vises</p>
           )}
@@ -16,7 +20,11 @@ export default function Recommendationpost({ post }) {
         </div>
         <div className="img-text-reco">
           {post.acf.personimage ? (
-            <img className="companyperson" src={post.acf.personimage.url} />
+            <img
+              className="companyperson"
+              src={post.acf.personimage.url}
+              alt="Billede af person"
+            />
           ) : (
             <p>Billedet kan ikke vises</p>
           )}

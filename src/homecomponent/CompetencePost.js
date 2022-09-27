@@ -1,10 +1,4 @@
 import "../css/App.css";
-import {
-  Animator,
-  ScrollContainer,
-  ScrollPage,
-  MoveOut,
-} from "react-scroll-motion";
 
 export default function PostItem({ post }) {
   return (

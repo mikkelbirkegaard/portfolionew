@@ -1129,7 +1129,7 @@ h4 {
   .imgportrait {
     display: block;
     border-radius: 60px;
-    width: 30vw;
+    width: 20vw;
     margin-left: 5%;
     margin-top: 5%;
   }
@@ -1222,7 +1222,6 @@ h4 {
   .over-all-aboutpost {
     display: flex;
     justify-content: space-between;
-    height: 80vh;
   }
   .over-text {
     width: 60vw;
