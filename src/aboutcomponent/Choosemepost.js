@@ -6,7 +6,7 @@ export default function Choosemepost({ post }) {
     <article>
       <div className="section-choose-reco">
         <div className="chooseme">
-          <h3 className="reco-heading">{post.acf.newoverskrift}</h3>
+          <h3 className="reco-heading margin-reco">{post.acf.newoverskrift}</h3>
           <p className="reco-maintext">{post.acf.newmaintext}</p>
         </div>
         <Recommendation />

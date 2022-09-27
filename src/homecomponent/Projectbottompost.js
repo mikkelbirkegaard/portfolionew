@@ -55,6 +55,7 @@ export default function Projektbuttom({ post }) {
                   <img
                     className="showprojectimg"
                     src={post.acf.imgprojekt1.url}
+                    alt="Skærmbillede af hjemmeside"
                   />
                 ) : (
                   <p>Billedet kan ikke vises</p>
@@ -63,6 +64,7 @@ export default function Projektbuttom({ post }) {
                   <img
                     className="showprojectimg"
                     src={post.acf.imgprojekt2.url}
+                    alt="Skærmbillede af hjemmeside"
                   />
                 ) : (
                   <p>Billedet kan ikke vises</p>
@@ -71,6 +73,7 @@ export default function Projektbuttom({ post }) {
                   <img
                     className="showprojectimg"
                     src={post.acf.imgprojekt3.url}
+                    alt="Skærmbillede af hjemmeside"
                   />
                 ) : (
                   <p>Billedet kan ikke vises</p>
@@ -91,7 +94,11 @@ export default function Projektbuttom({ post }) {
           <p className="overlay-text">Mere om projektet</p>
         </div>
         {post.acf.billedeknap ? (
-          <img className="project-info-image" src={post.acf.billedeknap.url} />
+          <img
+            className="project-info-image"
+            src={post.acf.billedeknap.url}
+            alt="Projektbillede"
+          />
         ) : (
           <p>Billedet kan ikke vises</p>
         )}

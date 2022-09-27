@@ -13,7 +13,11 @@ export default function PostItem({ post }) {
         <div className="kompetence-text-icon">
           <h4 className="margin-header">{post.acf.kompetencen}</h4>
           {post.acf.icons ? (
-            <img className="kompetence-icon" src={post.acf.icons.url} />
+            <img
+              className="kompetence-icon"
+              src={post.acf.icons.url}
+              alt="Kompetence ikoner"
+            />
           ) : (
             <p>Billedet kan ikke vises</p>
           )}
@@ -26,6 +30,7 @@ export default function PostItem({ post }) {
             <img
               className="kompetence-program"
               src={post.acf.programicons.url}
+              alt="Program ikoner"
             />
           ) : (
             <p>Billedet kan ikke vises</p>

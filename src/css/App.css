@@ -445,10 +445,19 @@ h4 {
 }
 /* Fadeineffect on elements ends here */
 
+.margin-reco {
+  padding: 5%;
+}
 /*Mediarules*/
 
-@media only screen and (max-height: 800px) {
+@media only screen and (max-height: 600px) {
   .imageofmikkel {
+    display: none;
+  }
+  .landingbtn {
+    display: none;
+  }
+  .roundcircle {
     display: none;
   }
 }
@@ -573,6 +582,7 @@ h4 {
     font-size: 12vw;
   }
   .mailbtn-contact {
+    cursor: pointer;
     border: none;
     background-color: transparent;
     font-size: 18px;
@@ -613,7 +623,6 @@ h4 {
   .reco-heading {
     font-size: 7vw;
     margin-bottom: 5%;
-    padding-left: 5%;
     padding-right: 5%;
   }
   .chooseme {
@@ -848,6 +857,7 @@ h4 {
     margin-top: 4vw;
   }
   .mailbtn-contact {
+    cursor: pointer;
     border: none;
     background-color: transparent;
     font-size: 25px;
@@ -1076,6 +1086,7 @@ h4 {
     height: 100vh;
   }
   .mailbtn-contact {
+    cursor: pointer;
     border: none;
     background-color: transparent;
     font-size: 40px;

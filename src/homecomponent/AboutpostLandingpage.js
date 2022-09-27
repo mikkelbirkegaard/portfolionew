@@ -10,7 +10,11 @@ export default function PostItem({ post }) {
         <div className="over-img-text">
           <div className="over-img-btn">
             {post.acf.portimage ? (
-              <img className="portrait-image" src={post.acf.portimage.url} />
+              <img
+                className="portrait-image"
+                src={post.acf.portimage.url}
+                alt="Portræt billede af Mikkel"
+              />
             ) : (
               <p>Billedet kan ikke vises</p>
             )}
@@ -30,7 +34,11 @@ export default function PostItem({ post }) {
               <p className="textcitat">{post.acf.textcitat}</p>
               <div className="spinicon-signatur">
                 {post.acf.signatur ? (
-                  <img className="signatur-image" src={post.acf.signatur.url} />
+                  <img
+                    className="signatur-image"
+                    src={post.acf.signatur.url}
+                    alt="Mikkels Signatur"
+                  />
                 ) : (
                   <p>Billedet kan ikke vises</p>
                 )}

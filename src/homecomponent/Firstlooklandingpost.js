@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Bluearrow from "../assets/bluearrow.png";
 import Whitearrow from "../assets/whitearrow.png";
 
-export default function PostItem({ post }) {
+export default function Firstlooklandingpost({ post }) {
   return (
     <article>
       <div className="over-frontpage-objects">
@@ -19,7 +19,11 @@ export default function PostItem({ post }) {
           </Link>
         </div>
         {post.acf.imageofme ? (
-          <img className="imageofmikkel" src={post.acf.imageofme.url} />
+          <img
+            className="imageofmikkel"
+            src={post.acf.imageofme.url}
+            alt="Billede af mikkel der sidder på et kontor"
+          />
         ) : (
           <p>Billedet kan ikke vises</p>
         )}

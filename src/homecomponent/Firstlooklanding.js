@@ -1,7 +1,7 @@
 import Backgroundimage from "../assets/bg-grain.jpg";
 import Roundcircle from "../assets/roundcircle.png";
 import { useEffect, useState } from "react";
-import PostItem from "./PostItem";
+import Firstlooklandingpost from "./Firstlooklandingpost";
 import {
   Animator,
   ScrollContainer,
@@ -44,7 +44,7 @@ export default function Firstlookonpage() {
                 </Animator>
               </div>
               {projects.map((project) => (
-                <PostItem key={project.id} post={project} />
+                <Firstlooklandingpost key={project.id} post={project} />
               ))}
             </section>
           </ScrollPage>
