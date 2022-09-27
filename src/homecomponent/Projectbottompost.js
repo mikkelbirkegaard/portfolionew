@@ -16,7 +16,7 @@ export default function Projektbuttom({ post }) {
                 onClick={() => setShow(!show)}
               >
                 <img
-                  className="social insta"
+                  className="cross-project"
                   src={Crosstoggle}
                   alt="Instagram"
                 />

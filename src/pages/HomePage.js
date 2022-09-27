@@ -4,26 +4,6 @@ import Aboutmeteaser from "../homecomponent/AboutmeLandingpage";
 import Projects from "../homecomponent/Projectbottom";
 import "../css/App.css";
 import React from "react";
-// import { createRoot } from "react-dom/client";
-
-// function FadeInContent(props) {
-//   const [isVisible, setVisible] = React.useState(false);
-//   const domRef = createRoot.useRef();
-//   createRoot.useEffect(() => {
-//     const observer = new IntersectionObserver((entries) => {
-//       entries.forEach((entry) => setVisible(entry.isIntersecting));
-//     });
-//     observer.observe(domRef.current);
-//   }, []);
-//   return (
-//     <div
-//       className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
-//       ref={domRef}
-//     >
-//       {props.children}
-//     </div>
-//   );
-// }
 
 export default function HomePage() {
   return (
@@ -61,6 +41,3 @@ export default function HomePage() {
     </>
   );
 }
-
-// const rootElement = document.getElementById("root");
-// createRoot.render(<HomePage />, rootElement);

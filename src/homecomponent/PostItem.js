@@ -14,7 +14,7 @@ export default function PostItem({ post }) {
             <button className="landingbtn">
               Om mig
               <img className="blue-arrow" src={Bluearrow} alt="Blå pil" />
-              <img className="white-arrow" src={Whitearrow} alt="Blå pil" />
+              <img className="white-arrow" src={Whitearrow} alt="Hvid pil" />
             </button>
           </Link>
         </div>

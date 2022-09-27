@@ -19,7 +19,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+.cross-project {
+  width: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
 :root {
   --cards: #f5f5f5;
   --white: #f1f1f1;
@@ -52,6 +56,10 @@ h4 {
   cursor: pointer;
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .aboutme-btn:hover {
   width: 300px;
@@ -61,6 +69,10 @@ h4 {
   margin-left: 20px;
 }
 .white-arrow {
+  width: 25px;
+  margin-left: 20px;
+}
+.white-arrow-about {
   width: 25px;
   margin-left: 20px;
 }
@@ -350,8 +362,12 @@ h4 {
   margin-left: 5%;
   margin-right: 5%;
 }
+.over-kompetence:hover {
+  box-shadow: 0px 40px 40px rgb(211, 211, 211);
+}
 
 .crossclose-icon {
+  cursor: pointer;
   height: 70px;
   background-color: transparent;
   font-size: 30px;
@@ -397,6 +413,7 @@ h4 {
   opacity: 0;
   background-color: var(--bluebutton);
   border-radius: 30px;
+  cursor: pointer;
 }
 
 .overlay-text {
@@ -429,6 +446,12 @@ h4 {
 /* Fadeineffect on elements ends here */
 
 /*Mediarules*/
+
+@media only screen and (max-height: 800px) {
+  .imageofmikkel {
+    display: none;
+  }
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -511,6 +534,7 @@ h4 {
     height: 100vh;
   }
   .over-kompetence {
+    transition: box-shadow 0.3s;
     display: flex;
     flex-direction: column;
     background-color: var(--cards);
@@ -524,6 +548,7 @@ h4 {
     box-shadow: 0px 10px 20px rgb(211, 211, 211);
     margin-top: 14vw;
   }
+
   .project-info-image {
     width: 90vw;
     height: 48vw;
@@ -552,6 +577,7 @@ h4 {
     background-color: transparent;
     font-size: 18px;
     padding-left: 1vw;
+    color: black;
   }
   .phonenumber-contact {
     font-size: 18px;
@@ -675,6 +701,10 @@ h4 {
   .white-arrow {
     display: none;
   }
+  .white-arrow-about {
+    width: 25px;
+    margin-left: 20px;
+  }
   .reco-maintext {
     background-color: var(--cards);
     padding: 5%;
@@ -787,10 +817,9 @@ h4 {
     width: 100%;
     height: 100vh;
   }
+
   .over-kompetence {
-    width: 100vw;
-  }
-  .over-kompetence {
+    transition: box-shadow 0.3s;
     display: flex;
     flex-direction: column;
     background-color: var(--cards);
@@ -823,6 +852,7 @@ h4 {
     background-color: transparent;
     font-size: 25px;
     padding-left: 1vw;
+    color: black;
   }
   .phonenumber-contact {
     font-size: 25px;
@@ -967,6 +997,10 @@ h4 {
   .white-arrow {
     display: block;
   }
+  .white-arrow-about {
+    width: 25px;
+    margin-left: 20px;
+  }
   .heading-landing {
     display: none;
   }
@@ -1046,6 +1080,7 @@ h4 {
     background-color: transparent;
     font-size: 40px;
     padding-left: 1vw;
+    color: black;
   }
   .phonenumber-contact {
     font-size: 40px;
@@ -1268,6 +1303,7 @@ h4 {
 }
 @media only screen and (min-width: 1065px) {
   .over-kompetence {
+    transition: box-shadow 0.3s;
     display: flex;
     flex-direction: column;
     background-color: var(--cards);

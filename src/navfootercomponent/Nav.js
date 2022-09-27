@@ -6,7 +6,7 @@ import Instaicon from "../assets/insta.png";
 import Linkedin from "../assets/linkedin.png";
 import Github from "../assets/github.png";
 import Logo from "../assets/mikkellogo.png";
-import Menutoggle from "../assets/menutoggle.png";
+import Menutoggle from "../assets/menutoogle.png";
 import Crosstoggle from "../assets/crosstoggle.png";
 import { HashLink as Link } from "react-router-hash-link";
 

@@ -1,6 +1,7 @@
 import "../css/App.css";
 import { Link } from "react-router-dom";
 import Spinnintext from "../assets/laesmere.png";
+import Whitearrow from "../assets/whitearrow.png";
 
 export default function PostItem({ post }) {
   return (
@@ -16,6 +17,11 @@ export default function PostItem({ post }) {
             <Link to="/about">
               <button className="aboutme-btn rightmarg bigscreenremove">
                 Om mig
+                <img
+                  className="white-arrow-about"
+                  src={Whitearrow}
+                  alt="Hvid pil"
+                />
               </button>
             </Link>
           </div>
@@ -36,6 +42,11 @@ export default function PostItem({ post }) {
             <Link to="/about">
               <button className="aboutme-btn rightmarg removesmallscreen">
                 Om mig
+                <img
+                  className="white-arrow-about"
+                  src={Whitearrow}
+                  alt="Hvid pil"
+                />
               </button>
             </Link>
           </div>
